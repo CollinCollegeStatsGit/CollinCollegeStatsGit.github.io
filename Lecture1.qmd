@@ -1,0 +1,354 @@
+---
+title: "Lecture 1"
+subtitle: "Data Collection"
+author: "Jason Snyder, Ph.D."
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r}
+#| echo: false
+  library(webexercises)
+```
+
+# Basic Definitions
+
+::: callout-note
+## A
+
+**Statistics** is the science of collecting, organizing, summarizing, and Analyzing information to draw conclusions or answer questions. In addition, statistics is about providing a measure of confidence in any conclusions made.
+:::
+
+::: callout-note
+## A
+
+**Data** are the observations that have been collected.
+
+Data are a fact or proposition used to draw a conclusion or make a decision. Data describe characteristics of an individual. The key aspect of data is that data varies.
+:::
+
+---
+
+::: callout-note
+## A
+
+The **population** is the entire group to be studied and an **individual** is a person or object that is a member of the population.
+
+A **sample** is a subset of the population being students.
+:::
+
+The sample data must be representative of the population from which the data was drawn.
+
+The sample data must be collected in an appropriate way, such as through a process of random selection.
+
+If sample data are not collected in an appropriate way, the data may be completely useless.
+
+----
+
+::: callout-note
+## A
+
+**Descriptive statistics** consists of organizing and summarizing data. Descriptive statistics describe data through numerical summaries, tables, and graphs.
+
+**Inferential statistics** uses methods that take a result from a sample, extends it to the population, and measures the reliability of the result.
+:::
+
+As for the numerical summaries in the definition of descriptive statistics, there are two types.
+
+::: callout-note
+## A
+
+A **parameter** is a numerical summary of a population.
+
+A **statistic** is a numerical summary of a sample.
+:::
+
+---
+
+::: callout-tip
+## B
+
+Suppose that the percentage of all students on a college campus who are Math majors is **4.5%**.
+
+:::: {.webex-box}
+The quantity **4.5%** is an example of a  <select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>parameter</option>
+<option value=''>statistic</option>
+</select>.
+::::
+:::
+
+::: callout-tip
+## B
+Suppose 250 students at a college campus are sampled and it determined that the average age is **20.6** years old.
+
+:::: {.webex-box}
+The quantity **20.6** is an example of a  <select class="webex-select">
+<option value='blank'></option>
+<option value=''>parameter</option>
+<option value='answer'>statistic</option>
+</select>.
+::::
+:::
+
+---
+
+::: callout-tip
+## B
+Suppose that 500 Americans, aged 18 years and older, are interviewed and it is determined that **89.4%** own at least one pet.
+
+:::: {.webex-box}
+The quantity **89.4%** is an example of a  <select class="webex-select">
+<option value='blank'></option>
+<option value=''>parameter</option>
+<option value='answer'>statistic</option>
+</select>.
+::::
+:::
+
+::: callout-tip
+## B
+A local restaurant has determined that its average bill for the previous night's service was **\$85.67**.
+
+:::: {.webex-box}
+The quantity **\$85.67** is an example of a  <select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>parameter</option>
+<option value=''>statistic</option>
+</select>.
+::::
+:::
+
+---
+
+::: callout-note
+## A
+A **variable** is some characteristic of the individuals within the population.
+
+-   A **qualitative variable** allows only for classification of individuals based on some attribute or characteristic.
+
+-   A **quantitative variable** provides numerical measures of individuals. Arithmetic operations such as addition and subtraction can be performed on these values and will provide meaningful results.
+
+There are two types of quantitative variables:
+
+-   A **discrete variable** is a quantitative variable that has either a finite number of values or a countable number of values.  Discrete variables are counted amounts.
+-   A **continuous variable** is a quantitative variable that has an infinite number of values which are not countable.  Continuous variables are measured amounts.
+:::
+
+---
+
+::: callout-tip
+## B
+Classify each of the following variables as qualitative or quantitative. If the variable is quantitative, classify it further as discrete or continuous.
+
+a.  nationality of a parent 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>qualitative</option>
+<option value=''>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>N/A</option>
+<option value=''>continuous</option>
+<option value=''>discrete</option>
+</select>.
+::::
+
+b.  number of children in a household 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value=''>qualitative</option>
+<option value='answer'>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value=''>N/A</option>
+<option value=''>continuous</option>
+<option value='answer'>discrete</option>
+</select>.
+::::
+
+c.  household income in the previous year 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value=''>qualitative</option>
+<option value='answer'>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value=''>N/A</option>
+<option value='answer'>continuous</option>
+<option value=''>discrete</option>
+</select>.
+::::
+:::
+
+---
+
+::: callout-tip
+## B
+a.  class rank - freshman, sophomore, junior, or senior 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>qualitative</option>
+<option value=''>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>N/A</option>
+<option value=''>continuous</option>
+<option value=''>discrete</option>
+</select>.
+::::
+
+b.  daily intake of whole grains (measured in grams per day) 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value=''>qualitative</option>
+<option value='answer'>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value=''>N/A</option>
+<option value='answer'>continuous</option>
+<option value=''>discrete</option>
+</select>.
+::::
+
+c.  temperature outside at the start of the day 
+
+:::: {.webex-box}
+<select class="webex-select">
+<option value='blank'></option>
+<option value=''>qualitative</option>
+<option value='answer'>quantitative</option>
+</select><select class="webex-select">
+<option value='blank'></option>
+<option value=''>N/A</option>
+<option value='answer'>continuous</option>
+<option value=''>discrete</option>
+</select>.
+::::
+:::
+
+# Types of Sampling
+
+Before performing many types of studies, a researcher must first take a sample. Sampling can be done **with replacement**, where selected individuals are placed back into the population and can be chosen again. Sampling can also be done **without replacement**, where selected individuals are removed from the population and can't be chosen again.
+
+---
+
+::: callout-note
+## A
+**Random sampling** is the process of using chance to select individuals from a population to be included in the sample.
+
+**Simple random sampling** is the process of using random sampling so that every sample of size $n$ has an equally likely chance of occuring.
+:::
+
+---
+
+::: callout-note
+## A
+In **stratified sampling**, you will separate the population into at least two homogeneous, non-overlapping groups, called **strata**. Then, you will obtain a simple random sample from each group.
+
+In **cluster sampling**, you will separate the population into sections called **clusters**, then you randomly select some of those clusters. Your sample will include every individual in each of the selected clusters.
+
+In **systematic sampling**, you will randomly select the first individual to sample, then sample every $k^{th}$ individual after the first.
+
+In **convenience sampling**, the sample is obtained in a convenient way, not randomly.  Any study that uses convenience sampling will generally have results     that are suspect. These results should be looked upon with extreme       skepticism.
+:::
+
+---
+
+::: callout-tip
+## B
+
+For each of the following descriptions of sampling methods, determine the type of sampling used.
+
+a.  All employees of the company are listed in alphabetical order. From the first 10 numbers, you randomly select a starting point: number 6. From number 6 onwards, every 10th person on the list is selected (6, 16, 26, 36, and so on), and you end up with a sample of 100 people.
+
+:::: {.webex-box}
+This is an example of <select class="webex-select">
+<option value='blank'></option>
+<option value=''>Simple Random Sampling</option>
+<option value=''>Stratified Sampling</option>
+<option value=''>Cluster Sampling</option>
+<option value='answer'>Systematic Sampling</option>
+<option value=''>Convenience Sampling</option>
+</select>.
+::::
+
+b.  You want to select sample of 1000 employees of a social media marketing company. You assign a number to every employee in the company database from 1 to 1000, and use a random number generator to select 100 numbers.
+
+:::: {.webex-box}
+This is an example of <select class="webex-select">
+<option value='blank'></option>
+<option value='answer'>Simple Random Sampling</option>
+<option value=''>Stratified Sampling</option>
+<option value=''>Cluster Sampling</option>
+<option value=''>Systematic Sampling</option>
+<option value=''>Convenience Sampling</option>
+</select>.
+::::
+:::
+
+---
+
+::: callout-tip
+## B
+a.  The company has offices in 10 cities across the country (all with roughly the same number of employees in similar roles). You don’t have the capacity to travel to every office to collect your data, so you use random sampling to select 3 offices.
+
+:::: {.webex-box}
+This is an example of <select class="webex-select">
+<option value='blank'></option>
+<option value=''>Simple Random Sampling</option>
+<option value=''>Stratified Sampling</option>
+<option value='answer'>Cluster Sampling</option>
+<option value=''>Systematic Sampling</option>
+<option value=''>Convenience Sampling</option>
+</select>.
+::::
+
+b.  The company has 800 female employees and 200 male employees. You want to ensure that the sample reflects the gender balance of the company, so you sort the population into two groups based on gender. Then you use random sampling on each group, selecting 80 women and 20 men, which gives you a representative sample of 100 people.
+
+:::: {.webex-box}
+This is an example of <select class="webex-select">
+<option value='blank'></option>
+<option value=''>Simple Random Sampling</option>
+<option value='answer'>Stratified Sampling</option>
+<option value=''>Cluster Sampling</option>
+<option value=''>Systematic Sampling</option>
+<option value=''>Convenience Sampling</option>
+</select>.
+::::
+:::
+
+---
+
+Unfortunately, sampling will always lead to some type of bias. There are three types of bias to look out for:
+
+::: callout-note
+## A
+**Sampling bias** occurs when the technique used to obtain the sample tends to favor one part of the population over another.
+
+**Non-response bias** occurs when individuals selected to be in the sample who do not respond to the survey have different opinions from those who do respond.
+
+**Response bias** occurs when the answers on a survey do not reflect the true feelings of the respondent.
+:::
+
+---
+
+In research, we wish to determine how varying the amount of an **explanatory variable** will affect the value of the **response variable**.
+
+::: callout-note
+## A
+A **designed experiment** is an experiment in which you assign the individuals in the study to a certain group, intentionally change the value of an explanatory variable, and then observe the changes in the response variable for each group.
+
+An **observational study** is a study in which you observe the behavior of the individuals in the study, without trying to infuence the outcome of the study. In an observational study, the researcher can only claim association, not causation.
+:::
