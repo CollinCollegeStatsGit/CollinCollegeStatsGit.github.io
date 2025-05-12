@@ -1,0 +1,20 @@
+project:
+  title: Elem_Stats_Presentations
+format:
+  revealjs:
+    engine: knitr
+    center: true
+    footer: MATH 1342 - Elementary Statistical Methods
+    css: include/webex.css
+    include-after-body: include/webex.js
+    navigation-mode: linear
+    math:
+      mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'
+  live-html:
+    engine: knitr
+    css: include/webex.css
+    include-after-body: include/webex.js
+theme: mytheme.scss
+filters:
+- webr
+- calloutmods.lua

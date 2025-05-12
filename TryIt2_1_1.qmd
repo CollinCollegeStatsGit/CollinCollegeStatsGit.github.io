@@ -1,0 +1,33 @@
+---
+format: live-html
+fontsize: 14pt
+fontfamily: Roboto
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+The frequency distribution of grades in a class with 32 students is shown.
+
+| Blood Type |  Frequency   |
+|:----------:|:------------:|
+|     A      | 5  |
+|     B      | 10  |
+|     C      | 8 |
+|     D      | 4  |
+|     F      | 5         |
+: {tbl-colwidths="[1,1]"}
+
+```{webr}
+#| exercise: ex_1_r
+______(1:10)
+```
+
+```{webr}
+#| exercise: ex_1_r
+#| check: true
+if (identical(.result, mean(1:10))) {
+  list(correct = TRUE, message = "Nice work!")
+} else {
+  list(correct = FALSE, message = "That's incorrect, sorry.")
+}
+```

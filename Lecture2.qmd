@@ -1,0 +1,117 @@
+---
+title: "Lecture 2"
+subtitle: "Organizing and Summarizing Data"
+author: "Jason Snyder, Ph.D."
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+
+```{r}
+#| echo: false
+library(ggplot2)
+blood_type <- data.frame(
+          type = c("O", "O", "A", "A", "O", "B", "O", "B", "A", "O", "AB", "B", "A", "B", "AB", "O", "O", "A", "A", "A", "AB", "O", "A", "B", "A", "O", "A", "A", "O", "O", "O", "A", "O", "AB", "A", "O", "B", "A", "A", "O", "O", "O", "O", "A", "O", "O", "A", "O", "A", "O")
+        )
+
+letter_grades <- data.frame(
+          grade = c("A", "B", "C", "D", "F"),
+          frequency = c(14, 13, 10, 4, 9)
+)
+```
+
+# Organizing Qualitative Data
+
+Since qualitative data has no numerical significance, we are limited in ways to organize and summarize this type of data.
+
+::: callout-note
+## A
+
+A **frequency distribution** is a list of each category of data together with the number of occurrences of each category of data.
+:::
+
+---
+
+::: callout-tip
+## B
+
+A phlebotomist takes blood samples from 50 patients and records each patient's blood type. The blood types are shown in the table below.
+
+|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| O   | O   | A   | A   | O   | B   | O   | B   | A   | O   | AB  | B   | A   | B   | AB  | O   | O   |
+| A   | A   | A   | AB  | O   | A   | B   | A   | O   | A   | A   | O   | O   | O   | A   | O   | AB  |
+| A   | O   | B   | A   | A   | O   | O   | O   | O   | A   | O   | O   | A   | O   | A   | O   |     |
+
+Construct a frequency distribution for this data.
+
+| Blood Type |  Frequency   |
+|:----------:|:------------|
+|     A      | <input class='webex-solveme nospaces' size='1' data-answer='["18"]'/> |
+|     AB     | <input class='webex-solveme nospaces' size='1' data-answer='["4"]'/>  |
+|     B      | <input class='webex-solveme nospaces' size='1' data-answer='["6"]'/>  |
+|     O      | <input class='webex-solveme nospaces' size='1' data-answer='["22"]'/> |
+
+:::
+
+---
+
+::: callout-note
+## A
+The **relative frequency** is the proportion (or percent) of observations within a category and is found using the following formula.  
+$$\text{Relative Frequency} =  \frac{\text{Frequency}}{\text{Sample Size}}$$
+A **relative frequency distribution** lists each category of the data together with the relative frequency of the category.
+:::
+
+---
+
+::: callout-tip
+## B
+Create a relative frequency distribution for the same data used in Example 1.
+
+| Blood Type |  Relative Frequency   |
+|:----------:|:------------|
+|     A      | <input class='webex-solveme nospaces' size='1' data-answer='["0.36", ".36"]'/> |
+|     AB     | <input class='webex-solveme nospaces' size='1' data-answer='["0.08", ".08"]'/>  |
+|     B      | <input class='webex-solveme nospaces' size='1' data-answer='["0.12", ".12"]'/>  |
+|     O      | <input class='webex-solveme nospaces' size='1' data-answer='["0.44", ".44"]'/> |
+:::
+---
+
+When raw qualitative data is organized into either a frequency or relative frequency distribution, we can create graphs that visually represent the data.
+
+The most common type of graph that is used to represent qualitative data is the bar graph.
+
+::: callout-note
+## A
+A **bar graph** is constructed by labeling each category of data on either the horizontal or vertical axis and the frequency or relative frequency of the category on the other axis.  Rectangles of equal width are drawn for each category.  The height of each rectangle represents the category’s frequency or relative frequency.
+:::
+
+---
+
+To generate the bar graph for the blood-type data, we will first need to create a **data frame**.  A data frame is a collection of data that is stored in a table format.  Each column in a data frame can contain different types of data, but the entries within a column should all be the same type.
+
+The following code creates a data frame type variable and calls it "blood_type_freq."
+
+```{r}
+#| echo: true
+blood_type_freq <- data.frame(
+  blood_type <- c("A", "AB", "B", "O"),
+  freq <- c(18, 4, 6, 22)
+)
+```
+
+---
+
+The following code tells r that you want to display the bar graph.
+```{r}
+#| echo: true
+barplot(height=blood_type_freq$freq, names=blood_type_freq$blood_type)
+```
+
+---
+
+## {background-iframe="TryIt2_1_1.html"}
+
+
+
